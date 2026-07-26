@@ -1,0 +1,50 @@
+<header class="site-header" id="site-header">
+    <div class="site-container site-header__content">
+        
+        <a href="{{ url_for('home') }}" class="navbar-brand">
+            <img src="{{ url_for('static', filename='img/logo/logo-hdagil-header.png') }}" alt="HDÁgil" class="navbar-logo">
+        </a>
+
+        <nav class="site-navigation" id="site-navigation" aria-label="Navegação principal">
+            <a href="{{ url_for('home') }}#plataforma">
+                Plataforma
+            </a>
+
+            <a href="{{ url_for('home') }}#produto">
+                Produto
+            </a>
+
+            <a href="{{ url_for('home') }}#segmentos">
+                Segmentos
+            </a>
+
+            <a href="{{ url_for('home') }}#recursos">
+                Tecnologia
+            </a>
+
+            <a href="{{ url_for('home') }}#sobre">
+                Sobre
+            </a>
+        </nav>
+
+        <div class="site-header__actions">
+
+            <a href="https://app.hdagil.com.br" class="site-login" target="_blank" rel="noopener noreferrer">
+                Entrar
+            </a>
+
+            <a href="{{ url_for('home') }}#demonstracao" class="site-button site-button--primary site-button--small">
+                Solicitar demonstração
+            </a>
+
+        </div>
+
+        <button type="button" class="site-menu-button" id="site-menu-button" aria-label="Abrir menu"
+            aria-expanded="false" aria-controls="site-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+</header>

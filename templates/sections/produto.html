@@ -1,0 +1,156 @@
+<section class="product-section" id="produto">
+    <div class="site-container">
+
+        <div class="product-section__heading">
+            <span class="section-eyebrow">
+                Produto real
+            </span>
+
+            <h2>
+                Veja o HDÁgil
+                <span>em ação.</span>
+            </h2>
+
+            <p>
+                Acompanhe como uma única informação percorre diferentes áreas
+                da empresa, mantendo pessoas, processos e decisões conectados.
+            </p>
+        </div>
+
+        <div class="product-experience">
+
+            <div class="product-tabs" role="tablist" aria-label="Etapas da operação no HDÁgil">
+
+                <button class="product-tab is-active" type="button" role="tab" aria-selected="true"
+                    aria-controls="product-panel" data-product-step="cliente">
+                    <span>01</span>
+                    Cliente
+                </button>
+
+                <button class="product-tab" type="button" role="tab" aria-selected="false" aria-controls="product-panel"
+                    data-product-step="pedido">
+                    <span>02</span>
+                    Pedido
+                </button>
+
+                <button class="product-tab" type="button" role="tab" aria-selected="false" aria-controls="product-panel"
+                    data-product-step="producao">
+                    <span>03</span>
+                    Produção
+                </button>
+
+                <button class="product-tab" type="button" role="tab" aria-selected="false" aria-controls="product-panel"
+                    data-product-step="financeiro">
+                    <span>04</span>
+                    Financeiro
+                </button>
+
+                <button class="product-tab" type="button" role="tab" aria-selected="false" aria-controls="product-panel"
+                    data-product-step="indicadores">
+                    <span>05</span>
+                    Indicadores
+                </button>
+
+            </div>
+
+            <div class="product-stage" id="product-panel">
+
+                <div class="product-stage__visual">
+
+                    <div class="product-window">
+
+                        <div class="product-window__bar">
+                            <div class="product-window__dots" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="product-window__address">
+                                app.hdagil.com.br
+                            </span>
+
+                            <span class="product-window__status">
+                                Plataforma ativa
+                            </span>
+                        </div>
+
+                        <div class="product-window__screen">
+                            <div class="product-window__fallback" id="product-fallback">
+                                <span>HD</span>
+
+                                <div>
+                                    <strong>Imagem da plataforma</strong>
+                                    <small>Adicione a captura em static/img/produto/</small>
+                                </div>
+                            </div>
+
+                            <img id="product-image" src="{{ url_for('static', filename='img/produto/cliente.png') }}"
+                                alt="Tela de clientes e contatos do HDÁgil" hidden>
+                        </div>
+
+                    </div>
+
+                    <div class="product-stage__connection" aria-hidden="true">
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <div class="product-stage__content">
+
+                    <span class="product-stage__eyebrow" id="product-eyebrow">
+                        Etapa 01 — Relacionamento
+                    </span>
+
+                    <h3 id="product-title">
+                        Tudo começa com uma visão completa do cliente.
+                    </h3>
+
+                    <p id="product-description">
+                        Dados, contatos, grupos e históricos permanecem
+                        centralizados. A mesma informação acompanha o cliente
+                        durante toda a jornada dentro da empresa.
+                    </p>
+
+                    <ul class="product-stage__list" id="product-list">
+                        <li>Cadastro centralizado</li>
+                        <li>Histórico de relacionamento</li>
+                        <li>Informação disponível para toda a operação</li>
+                    </ul>
+
+                    <div class="product-stage__flow">
+                        <span>Cliente</span>
+                        <strong aria-hidden="true">→</strong>
+                        <span>Pedido</span>
+                        <strong aria-hidden="true">→</strong>
+                        <span>Operação</span>
+                        <strong aria-hidden="true">→</strong>
+                        <span>Resultado</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="product-section__proof">
+
+            <div>
+                <span>Plataforma real</span>
+                <strong>
+                    Desenvolvida a partir de desafios vividos na operação.
+                </strong>
+            </div>
+
+            <p>
+                O HDÁgil não nasceu apenas como um conceito. Ele já acompanha
+                clientes, pedidos, produção, entregas, recebimentos e resultados
+                em operações reais.
+            </p>
+
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,235 @@
+<section class="final-cta" id="demonstracao">
+    <div class="site-container">
+
+        <div class="final-cta__panel">
+
+            <div class="final-cta__background" aria-hidden="true">
+                <span class="final-cta__orbit final-cta__orbit--one"></span>
+                <span class="final-cta__orbit final-cta__orbit--two"></span>
+                <span class="final-cta__orbit final-cta__orbit--three"></span>
+            </div>
+
+            <div class="final-cta__content">
+
+                <span class="final-cta__eyebrow">
+                    O próximo passo
+                </span>
+
+                <h2>
+                    Sua empresa já cresceu.
+                    <span>Agora é hora de conectar toda a operação.</span>
+                </h2>
+
+                <p>
+                    Conheça uma plataforma criada para conectar pessoas,
+                    processos e informações em um único fluxo.
+                </p>
+
+                <div class="final-cta__actions">
+
+                    <a href="mailto:hagoradigital@gmail.com?subject=Solicitação%20de%20demonstração%20HDÁgil"
+                        class="core-button core-button--primary final-cta__button">
+                        Solicitar demonstração
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="https://app.hdagil.com.br" class="core-button core-button--outline-light final-cta__button"
+                        target="_blank" rel="noopener noreferrer">
+                        Acessar a plataforma
+                    </a>
+
+                </div>
+
+                <div class="final-cta__assurances">
+
+                    <span>
+                        <i aria-hidden="true">✓</i>
+                        Apresentação personalizada
+                    </span>
+
+                    <span>
+                        <i aria-hidden="true">✓</i>
+                        Demonstração do produto real
+                    </span>
+
+                    <span>
+                        <i aria-hidden="true">✓</i>
+                        Conversa sem compromisso
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="final-cta__visual" aria-hidden="true">
+
+                <div class="final-cta__core">
+
+                    <span>HD</span>
+
+                    <div>
+                        <strong>HDÁgil</strong>
+                        <small>Tudo conectado</small>
+                    </div>
+
+                </div>
+
+                <article class="final-cta__node final-cta__node--top">
+                    Indicadores
+                </article>
+
+                <article class="final-cta__node final-cta__node--right">
+                    Financeiro
+                </article>
+
+                <article class="final-cta__node final-cta__node--bottom">
+                    Operação
+                </article>
+
+                <article class="final-cta__node final-cta__node--left">
+                    Relacionamento
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <div class="demo-form-panel">
+
+            <div class="demo-form-panel__heading">
+                <span class="section-eyebrow">
+                    Solicite uma apresentação
+                </span>
+
+                <h3>
+                    Vamos conhecer a operação da sua empresa.
+                </h3>
+
+                <p>
+                    Preencha os dados abaixo e entraremos em contato para organizar
+                    uma demonstração personalizada do HDÁgil.
+                </p>
+            </div>
+
+            <form method="POST" action="{{ url_for('home') }}#demonstracao" class="demo-form" novalidate>
+                {{ form.hidden_tag() }}
+
+                <div class="demo-form__honeypot" aria-hidden="true">
+                    {{ form.website(
+                    tabindex="-1",
+                    autocomplete="off"
+                    ) }}
+                </div>
+
+                <div class="demo-form__grid">
+
+                    <div class="demo-form__group">
+                        {{ form.nome.label }}
+
+                        {{ form.nome(
+                        placeholder="Seu nome",
+                        autocomplete="name"
+                        ) }}
+
+                        {% for error in form.nome.errors %}
+                        <small class="demo-form__error">
+                            {{ error }}
+                        </small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="demo-form__group">
+                        {{ form.empresa.label }}
+
+                        {{ form.empresa(
+                        placeholder="Nome da empresa",
+                        autocomplete="organization"
+                        ) }}
+
+                        {% for error in form.empresa.errors %}
+                        <small class="demo-form__error">
+                            {{ error }}
+                        </small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="demo-form__group">
+                        {{ form.email.label }}
+
+                        {{ form.email(
+                        placeholder="nome@empresa.com.br",
+                        autocomplete="email"
+                        ) }}
+
+                        {% for error in form.email.errors %}
+                        <small class="demo-form__error">
+                            {{ error }}
+                        </small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="demo-form__group">
+                        {{ form.telefone.label }}
+
+                        {{ form.telefone(
+                        placeholder="(48) 99999-9999",
+                        autocomplete="tel",
+                        inputmode="tel"
+                        ) }}
+
+                        {% for error in form.telefone.errors %}
+                        <small class="demo-form__error">
+                            {{ error }}
+                        </small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="demo-form__group demo-form__group--full">
+                        {{ form.segmento.label }}
+                        {{ form.segmento() }}
+
+                        {% for error in form.segmento.errors %}
+                        <small class="demo-form__error">
+                            {{ error }}
+                        </small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="demo-form__group demo-form__group--full">
+                        {{ form.mensagem.label }}
+
+                        {{ form.mensagem(
+                        rows="5",
+                        placeholder="Conte brevemente sobre sua operação e o que deseja conhecer."
+                        ) }}
+
+                        {% for error in form.mensagem.errors %}
+                        <small class="demo-form__error">
+                            {{ error }}
+                        </small>
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+                <div class="demo-form__footer">
+
+                    <p>
+                        Seus dados serão utilizados apenas para responder
+                        à solicitação de contato.
+                    </p>
+
+                    <button type="submit" class="core-button core-button--primary demo-form__submit">
+                        Solicitar demonstração
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>

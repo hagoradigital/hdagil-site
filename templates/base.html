@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}HDÁgil | Gestão inteligente para empresas{% endblock %}
+    </title>
+
+    <meta name="description"
+        content="{% block meta_description %}O HDÁgil conecta pessoas, processos e informações em uma plataforma operacional inteligente para empresas.{% endblock %}">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Fundamentos e componentes do HD Core -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hdcore.css') }}">
+
+    <!-- Header, navegação, containers e footer -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+
+    <!-- Seções específicas do site institucional -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+    <a class="skip-link" href="#conteudo-principal">
+        Ir para o conteúdo principal
+    </a>
+
+    {% include "layout/header.html" %}
+
+    <main id="conteudo-principal">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="site-flashes site-container" aria-live="polite" aria-atomic="true">
+            {% for category, message in messages %}
+            <div class="site-flash site-flash--{{ category }}">
+                <span>{{ message }}</span>
+        
+                <button type="button" class="site-flash__close" aria-label="Fechar mensagem">
+                    ×
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "layout/footer.html" %}
+
+    <script src="{{ url_for('static', filename='js/site.js') }}" defer></script>
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+
+</html>
