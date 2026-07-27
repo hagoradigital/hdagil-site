@@ -2942,16 +2942,12 @@ a {
 
     display: block;
 
-    object-fit: cover;
+    object-fit: contain;
     object-position: top center;
 
     transition:
         opacity 180ms ease,
         transform 500ms ease;
-}
-
-.product-window:hover .product-window__screen img {
-    transform: scale(1.015);
 }
 
 .product-window__screen img.is-changing {
