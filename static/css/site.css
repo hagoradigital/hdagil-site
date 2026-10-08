@@ -5343,8 +5343,8 @@ a {
    FORMULÁRIO DE DEMONSTRAÇÃO
 ================================================== */
 
-.demo-form {
-    scroll-margin-top: 100px;
+.demo-form-panel {
+    scroll-margin-top: calc(var(--site-header-height, 83px) + 16px);
 }
 
 .demo-form-panel {
@@ -5574,5 +5574,27 @@ a {
 
     .site-flashes {
         top: 78px;
+    }
+}
+.final-cta__email {
+    position: relative;
+    margin-top: 16px;
+    color: #e2e8f0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+#contact-email {
+    user-select: text;
+}
+
+#copy-email-status {
+    display: block;
+    margin-top: 6px;
+}
+
+@media (max-width: 680px) {
+    .demo-form-panel {
+        scroll-margin-top: calc(var(--site-header-height, 69px) + 16px);
     }
 }
