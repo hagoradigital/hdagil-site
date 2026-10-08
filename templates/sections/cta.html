@@ -1,4 +1,4 @@
-<section class="final-cta" id="demonstracao">
+<section class="final-cta">
     <div class="site-container">
 
         <div class="final-cta__panel">
@@ -29,7 +29,7 @@
 
                     <a href="mailto:hagoradigital@gmail.com?subject=Solicitação%20de%20demonstração%20HDÁgil"
                         class="core-button core-button--primary final-cta__button">
-                        Solicitar demonstração
+                        Falar por e-mail
                         <span aria-hidden="true">→</span>
                     </a>
 
@@ -112,7 +112,7 @@
                 </p>
             </div>
 
-            <form method="POST" action="{{ url_for('home') }}#demonstracao" class="demo-form" novalidate>
+            <form id="demonstracao" method="POST" action="{{ url_for('home') }}#demonstracao" class="demo-form" novalidate>
                 {{ form.hidden_tag() }}
 
                 <div class="demo-form__honeypot" aria-hidden="true">
