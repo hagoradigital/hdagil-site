@@ -42,6 +42,39 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Mantém a margem das âncoras alinhada à altura real do cabeçalho.
+    if (header) {
+        const measureHeader = () => {
+            document.documentElement.style.setProperty(
+                "--site-header-height",
+                `${header.getBoundingClientRect().height}px`
+            );
+        };
+
+        measureHeader();
+        if (typeof ResizeObserver !== "undefined") {
+            new ResizeObserver(measureHeader).observe(header);
+        } else {
+            window.addEventListener("resize", measureHeader);
+        }
+    }
+
+    const copyEmailButton = document.getElementById("copy-email");
+    const contactEmail = document.getElementById("contact-email");
+    const copyEmailStatus = document.getElementById("copy-email-status");
+
+    if (copyEmailButton && contactEmail && copyEmailStatus) {
+        copyEmailButton.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(contactEmail.textContent.trim());
+                copyEmailStatus.textContent = "E-mail copiado!";
+            } catch {
+                copyEmailStatus.textContent =
+                    "Não foi possível copiar automaticamente. Selecione e copie o endereço acima.";
+            }
+        });
+    }
+
     /* ==================================================
        PRODUTO EM AÇÃO
     ================================================== */
