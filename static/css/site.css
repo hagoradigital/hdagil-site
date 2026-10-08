@@ -3132,6 +3132,11 @@ a {
     line-height: 1.75;
 }
 
+.product-window__fallback[hidden],
+.product-window__screen img[hidden] {
+    display: none;
+}
+
 .product-window__fallback {
     position: absolute;
     inset: 0;
@@ -5337,6 +5342,10 @@ a {
 /* ==================================================
    FORMULÁRIO DE DEMONSTRAÇÃO
 ================================================== */
+
+.demo-form {
+    scroll-margin-top: 100px;
+}
 
 .demo-form-panel {
     margin-top: 34px;
